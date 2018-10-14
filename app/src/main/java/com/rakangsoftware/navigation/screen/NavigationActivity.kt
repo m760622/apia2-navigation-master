@@ -23,30 +23,27 @@ class NavigationActivity : AppCompatActivity() {
         setContentView(R.layout.navigation_activity)
 
         val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
+        val navigationView: NavigationView = findViewById(R.id.navigation)
 
-        val navigationView: NavigationView = findViewById(R.id.navigation);
         navigationView.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.local_bar -> {
                     nav_label.text = getString(R.string.bottom_nav_bar)
-                    drawer_layout.closeDrawer(Gravity.START)
+                    drawerLayout.closeDrawer(Gravity.START)
                     true
                 }
                 else -> false
             }
         }
 
-
         drawerToggle = ActionBarDrawerToggle(
                 this,
-                drawer_layout,
+                drawerLayout,
                 toolbar,
                 R.string.drawer_open,
                 R.string.drawer_close
         )
-        drawer_layout.addDrawerListener(drawerToggle)
-
-
+        drawerLayout.addDrawerListener(drawerToggle)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
