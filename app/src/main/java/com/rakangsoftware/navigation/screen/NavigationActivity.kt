@@ -1,5 +1,7 @@
 package com.rakangsoftware.navigation.screen
 
+import android.content.Context
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
@@ -12,9 +14,14 @@ import kotlinx.android.synthetic.main.navigation_activity.*
 
 class NavigationActivity : AppCompatActivity() {
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.navigation_activity)
+
+
+
+
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
@@ -44,6 +51,9 @@ class NavigationActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+      //  val intent = Intent(this, SecondActivity::class.java)
+      //  startActivity(intent)
+
         when (item.itemId) {
             R.id.shareMenu -> nav_label.text = "Toolbar bar nav pressed."
             R.id.settingsMenu -> nav_label.text = "Toolbar Settings nav pressed."
@@ -51,7 +61,11 @@ class NavigationActivity : AppCompatActivity() {
         //    android.R.id.home -> onBackPressed()
           //  R.id.home ->  onBackPressed()
 
-            R.id.local_florist -> SecondActivity.start(this)
+            R.id.local_florist -> {
+              //  val intent=Intent(applicationContext, SecondActivity::class.java)
+              //      startActivity(intent)
+                SecondActivity.start(this)
+            }
             android.R.id.home -> {
                 NavUtils.navigateUpFromSameTask(this)
                 return true
