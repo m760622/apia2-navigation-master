@@ -6,12 +6,10 @@
     <string name="close">close</string>
     <string name="search">Search</string>
     <string name="next">Next</string>
+    <string name="second">Second</string>
+    <string name="third">Third</string>
     <string name="navigation_list">list</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
     <string name="bottom_nav_bar">bottom_nav_bar</string>
-
-
-
-
 </resources>

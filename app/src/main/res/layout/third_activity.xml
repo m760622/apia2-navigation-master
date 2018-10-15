@@ -5,7 +5,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".screen.SecondActivity">
+tools:context=".screen.ThirdActivity">
 
 
 <android.support.v4.widget.DrawerLayout
@@ -22,7 +22,7 @@ tools:context=".screen.SecondActivity">
         tools:context=".screen.NavigationActivity">
 
         <TextView
-            android:id="@+id/secondTV"
+            android:id="@+id/thirdTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -31,7 +31,7 @@ tools:context=".screen.SecondActivity">
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            android:text="TextView 2"
+            android:text="TextView 3"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -49,25 +49,8 @@ tools:context=".screen.SecondActivity">
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <android.support.design.widget.BottomNavigationView
-            android:id="@+id/bottom_navigation"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:itemBackground="@color/colorPrimary"
-            app:itemIconTint="@color/white"
-            app:itemTextColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/bottom_navigation" />
     </android.support.constraint.ConstraintLayout>
 
-    <android.support.design.widget.NavigationView
-        android:id="@+id/navigation"
-        android:layout_gravity="start"
-        android:layout_height="match_parent"
-        android:layout_width="wrap_content"
-        app:menu="@menu/drawer_menu" />
 </android.support.v4.widget.DrawerLayout>
 
 </android.support.constraint.ConstraintLayout>

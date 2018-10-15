@@ -17,7 +17,10 @@
         android:title="@string/settings" />
     <item
         android:id="@+id/local_florist"
-        android:title="@string/next" />
+        android:title="@string/second" />
+    <item
+        android:id="@+id/thirdMenu"
+        android:title="@string/third" />
     <item android:title="@string/info" />
     <item
         android:id="@+id/CloseMenu"
